@@ -43,6 +43,9 @@
 					%>
 
 					<div aria-multiselectable="true" class="panel-group" id="<portlet:namespace />Accordion" role="tablist">
+						
+						<liferay-util:dynamic-include key="com.liferay.product.navigation.control.menu.web#/add_panel.jsp#pre" />
+					
 						<c:if test="<%= hasAddApplicationsPermission %>">
 							<div class="add-application-panel panel">
 								<div class="panel-heading" id="<portlet:namespace />addApplicationHeading" role="tab">
@@ -86,6 +89,8 @@
 								</div>
 							</div>
 						</c:if>
+						
+						<liferay-util:dynamic-include key="com.liferay.product.navigation.control.menu.web#/add_panel.jsp#post" />
 
 						<c:if test="<%= hasAddApplicationsPermission && hasAddContentPermission %>">
 							<aui:script use="liferay-store">
